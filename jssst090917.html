@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <!-- metadata -->
+    <meta name="generator" content="S5" />
+    <meta name="version" content="S5 1.1" />
+    <meta name="presdate" content="20090917" />
+    <meta name="author" content="Teruaki Gemma" />
+    <meta name="company" content="名古屋大学大学院多元数理科学研究科" />
+    <!-- configuration parameters -->
+    <meta name="defaultView" content="slideshow" />
+    <meta name="controlVis" content="hidden" />
+    <title>Webと対話するブラウザ拡張「Musubi」の開発</title>
+    <!-- style sheet links -->
+    <link rel="stylesheet" href="pixel/slides.css" type="text/css" media="projection" id="slideProj" />
+    <link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+    <link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+    <link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+    <!-- embedded styles -->
+    <style type="text/css" media="all">
+    </style>
+    <!-- S5 JS -->
+    <script src="ui/default/slides.js" type="text/javascript"></script>
+  </head>
+<body>
+<div class="layout">
+  <div id="controls"><!-- DO NOT EDIT --></div>
+  <div id="currentSlide"><!-- DO NOT EDIT --></div>
+  <div id="header"></div>
+  <div id="footer">
+    <h1>Webと対話するブラウザ拡張「Musubi」の開発</h1>
+    <h2>源馬照明, Jacques Garrigue &#8226; 2009年9月17日</h2>
+  </div>
+</div>
+<div class="presentation">
+
+<div class="slide">
+  <h1>Webと対話するブラウザ拡張<br/>「Musubi」の開発</h1>
+  <h3>源馬照明, Jacques Garrigue</h3>
+  <h4><a href="http://www.math.nagoya-u.ac.jp/">名古屋大学大学院多元数理科学研究科</a></h4>
+</div>
+
+
+<div class="slide">
+<h1>概略</h1>
+<ul>
+<li>ブラウザをインスタントメッセンジャ(IM)にします</li>
+<li>ブラウザとIMの画面比較</li>
+</ul>
+<a href="compare.png"><img src="compare.png" width="300px"/></a>
+</div>
+
+<div class="slide">
+<h1>Webを拡張する</h1>
+<ul>
+<li>URI
+<li>HTML
+<li>HTTP
+</ul>
+↑にIMを混ぜるとどうなる?
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>URIにIMを混ぜる</h1>
+<ul>
+<li><a href="xmpp:teruakigemma@gmail.com">xmpp:teruakigemma@gmail.com</a>
+<li>cf. <a href="mailto:teruakigemma@gmail.com">mailto:teruakigemma@gmail.com</a>
+</ul>
+<a href="xmppuri.png"><img src="xmppuri.png"/></a>
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>HTMLにIMを混ぜる(1)</h1>
+<ul>
+<li>チャット</li>
+<li><a href="whiteboard.png">共有黒板</a></li>
+<li><a href="chess.png">チェス</a></li>
+<li>Twitter</li>
+</ul>
+<a href="jssst.ogv">動画</a>
+</div>
+
+<div class="slide">
+<h1>HTMLにIMを混ぜる(2)</h1>
+<div class="tip">
+<p>JavascriptのAPI</p>
+<ul>
+<li><code>Musubi.init()</code> 初期化
+<li><code>Musubi.onRecv = 受信メッセージ処理関数</code>
+<li><code>Musubi.send(送信メッセージ)</code>
+</ul>
+</div>
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>HTTPの限界</h1>
+<p>HTTPではチャットは作れない</p>
+<img class="right" src="grass.jpg"/>
+<ul>
+<li>プルはあるが
+<li>プッシュがない
+<li>サーバが更新してもブラウザに伝えられない
+<li>ブラウザがポーリングするのが精一杯
+</ul>
+</div>
+
+<div class="slide">
+<h1>HTTPの限界を越えるComet(しかし・・・)</h1>
+<p>HTTPをハック</p>
+<ul>
+<li>ブラウザごとに対応がマチマチ
+<li>サーバに負担
+<li>通信に無駄が多い <a href="comet.html">例.Hello,worldメッセージ</a></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>HTTPにIMを混ぜる</h1>
+<ul>
+<li>コミュニケーションのWeb
+<li>リアルタイムのWeb
+</ul>
+<a href="archi.png"><img src="archi.png" width="300px" style="margin: 50px;"/></a>
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>XMPP(1)</h1>
+<ul>
+<li>拡張性(e<strong>X</strong>tensible)
+<li>インスタントメッセージ(<strong>M</strong>essage)
+<li>プレゼンス(<strong>P</strong>resence)
+<li>プロトコル(<strong>P</strong>rotocol)
+</ul>
+</div>
+
+<div class="slide">
+<h1>XMPP(2)</h1>
+<ul>
+<li>オープン
+<li>スタンダード(RFC3920)
+<li>実証(Google Talk)
+<li>分散
+<li>セキュア(TLS, SASL)
+<li>拡張性(XML)
+<li>柔軟性
+</ul>
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>CSCW</h1>
+<p>
+<strong>C</strong>omputer
+<strong>S</strong>upported
+<strong>C</strong>ooperative
+<strong>W</strong>ork
+<i>コンピュータ支援協調作業</i>
+</p>
+<ul>
+<li>プレゼンス
+<li>友達管理(承認、ブロック、etc)
+<li>ルーム管理(招待、キック、プライベートルーム、etc)
+</ul>
+<p>XMPPの仕様に既にある</p>
+</div>
+
+<div class="slide">
+<h1>Firefox拡張</h1>
+<ul>
+<li>マルチプラットフォーム
+<li>インストール簡単
+<li>ブラウザならみんなわかる
+</ul>
+</div>
+
+<div class="slide">
+<h1>まとめ</h1>
+<a href="orga.png"><img src="orga.png"/></a>
+</div>
+
+<div class="slide">
+<h1>展望</h1>
+<ul>
+<li>コンピュータと対話する
+<li>OSの対話的シェル ＝ Webの対話的ブラウザ
+</ul>
+<a href="repl.ogv">動画(Schemeインタープリタと対話)</a>
+</div>
+
+<div class="slide">
+<h1>柔軟性</h1>
+<ul>
+<li>ネットワーク管理
+<li>コンテンツ・シンジケーション
+<li>協調作業ツール
+<li>ファイル共有
+<li>ゲーム
+<li>リモートシステム監視
+<li>Webサービス
+<li>軽量ミドルウェア
+<li>クラウドコンピューティング
+</ul>
+</div>
+
+</div>
+
+</body>
+</html>

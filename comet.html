@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <pre>
+クライアント（ブラウザ）からサーバへのリクエスト
+GET /long-polling HTTP/1.1\r\n
+Host: www.kaazing.com\r\n
+User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9) Gecko/2008061017 Firefox/3.0\r\n
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n
+Accept-Language: en-us,en;q=0.5\r\n
+Accept-Encoding: gzip,deflate\r\n
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\r\n
+Keep-Alive: 300\r\n
+Connection: keep-alive\r\n
+Cache-Control: max-age=0\r\n
+\r\n
+
+
+サーバからクライアント（ブラウザ）へのレスポンス
+Date: Tue, 16 Aug 2008 00:00:00 GMT\r\n
+Server: Apache/2.2.9 (Unix)\r\n
+Content-Type: text/plain\r\n
+Content-Length: 12\r\n
+\r\n
+Hello, world
+    </pre>
+  </body>
+</html>
