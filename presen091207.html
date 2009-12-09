@@ -36,7 +36,7 @@
 <div class="presentation">
 
 <div class="slide">
-  <h1>Webブラウザと融合する<br/>インスタントメッセンジャー「むすび」</h1>
+  <h1>Webブラウザと融合する<br/>インスタントメッセンジャー<br/>「むすび」</h1>
   <h3>源馬照明, Jacques Garrigue</h3>
   <h4><a href="http://www.math.nagoya-u.ac.jp/">名古屋大学大学院多元数理科学研究科</a></h4>
 </div>
@@ -110,11 +110,15 @@
 <div class="slide">
   <h1>ブラウザと融合 - URI</h1>
   <ul>
-    <li><a href="xmpp:teruakigemma@gmail.com">xmpp:teruakigemma@gmail.com</a>
-    <li>cf. <a href="mailto:teruakigemma@gmail.com">mailto:teruakigemma@gmail.com</a>
+    <li>
+      <a href="xmpp:teruakigemma@gmail.com">xmpp:teruakigemma@gmail.com</a>
+      <ul>
+        <li>cf. <a href="mailto:teruakigemma@gmail.com">mailto:teruakigemma@gmail.com</a></li>
+      </ul>
+    </li>
+    <li><a href="xmpp:teruakigemma@gmail.com">xmpp://romeo@gmail.com/Musubi/juliet@gmail.com</a></li>
   </ul>
-  <br />
-  <a href="xmppuri.png"><img src="xmppuri.png"/></a><br/>
+  <p><a href="xmppuri.png"><img src="xmppuri.png"/></a></p>
   <p>人をリンク、ブックマークできる。</p>
 </div>
 
@@ -161,7 +165,7 @@
 <div class="slide">
   <h1>むすびの設計(2/2)</h1>
   <p>アーキテクチャ</p>
-  <img src="archi.png"/>
+  <img src="archi.png" height="300"/>
 </div>
 
 <div class="slide">
@@ -189,7 +193,7 @@
 <div class="slide">
   <h1>むすびの設計(再掲)</h1>
   <p>アーキテクチャ</p>
-  <img src="archi.png"/>
+  <img src="archi.png" height="300"/>
 </div>
 
 
@@ -256,6 +260,8 @@
     <li>ブラウザで動く
     <li>チャットやドキュメントの共同編集
     <li>遅い、頻繁にクラッシュする、バグが多いとの意見も
+      <ul><li>前述のHTTPのハックのため?</li></ul>
+    </li>
     <li>ブラウザでコミュニケーションという未知の可能性
   </ul>
 </div>
@@ -267,6 +273,8 @@
     <li>大きなシェア(1億人)
     <li>音声・ビデオチャット
     <li>非公開プロトコル
+      <ul><li>逆に、むすびのXMPPは公開されている。</li></ul>
+    </li>
   </ul>
 </div>
 
@@ -281,7 +289,6 @@
       <ul><li>ブラウザでは不可能</li></ul>
     </li>
     <li>充実したサポート体制
-    <li>SOBA Web APIに興味津々</li>
   </ul>
 </div>
 
